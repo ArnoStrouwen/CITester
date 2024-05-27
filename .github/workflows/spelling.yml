@@ -1,0 +1,8 @@
+name: Spell Check
+
+on: [pull_request]
+
+jobs:
+    typos-check:
+      name: "Typos"
+      uses: "ArnoStrouwen/CITester/.github/workflows/reusable_spelling.yml@main"
