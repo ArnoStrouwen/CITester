@@ -14,12 +14,6 @@ jobs:
         uses: crate-ci/typos@v1.16.23 
         with: 
           write_changes: true
-      - name: "Apply formatting changes"
-        run: |
-          echo "$(cat <<'END_FORMATTING_DIFF'
-          ${{ needs.check-formatting.outputs.format-diff-patch }}
-          END_FORMATTING_DIFF
-          )" | git apply
       - uses: reviewdog/action-suggester@v1
         with:
           tool_name: Typos
