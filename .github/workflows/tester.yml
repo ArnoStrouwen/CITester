@@ -6,4 +6,5 @@ jobs:
     build-and-deploy-docs:
       name: "Format"
       uses: "SciML/.github/.github/workflows/format-suggestions-on-pr.yml@v1"
+      secrets: "inherit"
   
