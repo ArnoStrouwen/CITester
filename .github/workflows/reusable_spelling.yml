@@ -14,6 +14,8 @@ jobs:
         uses: crate-ci/typos@v1.16.23 
         with: 
           write_changes: true
+      - name: "Apply typos changes"
+        run: git apply
       - uses: reviewdog/action-suggester@v1
         with:
           tool_name: Typos
